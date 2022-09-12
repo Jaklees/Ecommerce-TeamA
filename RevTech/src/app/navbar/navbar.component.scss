@@ -1,0 +1,214 @@
+//navbar start
+.navbar {
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2d42;
+  padding: 1rem 2rem;
+
+  #username {
+    margin-left: .25rem;
+    font-size: 1rem;
+  }
+  h2{
+    font-size: 2rem;
+    color: white;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .9s all ease-in-out;
+    &:hover{
+      color: lightgreen;
+    }
+  }
+
+  .card {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    #darkModeBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      #dark {
+        cursor: pointer;
+        border: none;
+        padding: .3rem .5rem;
+        font-size: .8rem;
+        background: #0a0f1a;
+        color: #f2cc8f;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      #light {
+        cursor: pointer;
+        border: none;
+        padding: .3rem .5rem;
+        background: #f2cc8f;
+        color: white;
+        font-size: .8rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: lightgreen;
+    }
+  }
+
+  // number on the cart
+  #counter {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+// navbar ends
+
+.user-menu {
+  position: absolute;
+  display: none;
+  width: 12%;
+  padding-bottom: 1rem;
+  color: white;
+  background-color: #2b2d42;
+  border-bottom-right-radius: 8px;
+
+  ul {
+    list-style: none;
+    width: 100%;
+
+    .menu-content {
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        cursor: pointer;
+        font-size: 1rem;
+        margin-bottom: .25rem;
+        padding: .2rem 0;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+          background: #242536;
+          color: lightblue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 754px) {
+  .user-menu {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+
+  .navbar {
+    button {
+      font-size: .9rem;
+    }
+    .card{
+      width: 30%;
+      justify-content: space-between;
+      #darkModeBtn{
+        #dark,#light{
+          padding: .3rem;
+          font-size: .6rem;
+        }
+      }
+    }
+  }
+}
+
+.cart {
+  position: absolute;
+  right: -100%;
+  height: 100vh;
+  width: 25%;
+  background-color: white;
+  border-left: 2px solif lightslategrey;
+  transition: all .7s ease;
+
+  .close-card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    button {
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      color: #2b2d42;
+      cursor: pointer;
+
+      &:hover {
+        color: #242536;
+      }
+    }
+  }
+
+  .cart-container {
+    padding: 0 1rem;
+
+    h2 {
+      font-size: 2rem;
+      text-decoration: underline;
+      color: #2b2d42;
+    }
+  }
+
+
+  .cart-confirm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: none;
+      background: #3a3c58;
+      font-size: 1.5rem;
+      color: white;
+      width: 50%;
+      padding: .1rem 0;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background: #2b2d42;
+      }
+    }
+  }
+}
+
+.magic {
+  display: block;
+}
+
+.cartMagic {
+  transition: all .5s ease-in-out;
+  right: 0;
+}

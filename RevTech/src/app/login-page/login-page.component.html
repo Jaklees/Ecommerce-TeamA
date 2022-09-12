@@ -1,0 +1,20 @@
+<div class="login">
+  <h1>Login</h1>
+  <span id="invalid" class="invalid"><br>Invalid username and/or password<br></span>
+  <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" ngNativeValidate>
+    <div class="input-container">
+      <label for="usern">Username</label>
+      <input ngModel type="text" name="username" placeholder="Username..." id="username" required>
+    </div>
+    <div class="input-container">
+      <label for="password">Password</label>
+      <input ngModel [type]="show ? 'text' : 'password'" name="password" placeholder="Password..." id="password" required>
+      <span (click)="showPassword()"><fa-icon [icon]="faFaceRollingEyes" id="icon"></fa-icon>{{show ? 'Hide Password' : 'Show Password' }}</span>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <div class="help">
+    <span><a routerLink="/register" routerLinkActive="active">Not registered? Register Now</a></span>
+    <span><a routerLink="/resetPassword" routerLinkActive="active">Forgot your password?</a></span>
+  </div>
+</div>

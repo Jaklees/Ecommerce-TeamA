@@ -1,0 +1,151 @@
+.register {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #2b2d42;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .input-row-email{
+      margin-bottom: .5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .input-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 1.2rem;
+          color: #2b2d42;
+        }
+        input {
+          width: 100%;
+          font-size: 1.1rem;
+          color: #1d3557;
+          padding: .4rem .8rem;
+          outline: none;
+          border: solid #24426b 1.1px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .input-row{
+      margin-bottom: .5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .input-container{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 1.2rem;
+          color: #2b2d42;
+        }
+        input {
+          width: 100%;
+          font-size: 1.1rem;
+          color: #1d3557;
+          padding: .4rem .8rem;
+          outline: none;
+          border: solid #24426b 1.1px;
+          border-radius: 5px;
+        }
+        span{
+          #icon {
+            margin-right: .25rem;
+          }
+          margin-top: .5rem;
+          color: #1d3557;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    button{
+      width: 100%;
+      border: none;
+      color: white;
+      background: #253753;
+      border-radius: 5px;
+      padding: .4rem 0;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: .3s all ease-in-out;
+      &:hover {
+        background: #2b2d42;
+      }
+    }
+  }
+  .help{
+    margin-top: 1rem;
+    span{
+      color: #2b2d42;
+      font-size: .9rem;
+      a{
+        text-decoration: none;
+        color: #2b2d42;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+  #usernametaken, #phoneused, #emailused, #nomatchpass {
+    display: none;
+    color: red;
+  }
+}
+
+.register-success{
+  position: fixed;
+  top: 12%;
+  right: -100%;
+  width: 25%;
+  padding: .8rem 2rem;
+  background-image: linear-gradient( 109.6deg,  rgba(102,203,149,1) 11.2%, rgba(39,210,175,1) 98.7% );
+  border: 1px solid white;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: rgba(128, 0, 144, 0.2) 0px 13px 27px -5px, rgba(128, 0, 144, 0.2) 0px 8px 16px -8px;
+  transition: all .6s ease-in-out;
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    span{
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+    }
+    #icon{
+      color: white;
+      font-size: 1.25rem
+    }
+  }
+}
+.showAdded4 {
+  right: 0;
+}
